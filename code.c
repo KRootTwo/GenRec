@@ -4,6 +4,9 @@
 #include <string.h>
 #include <stddef.h>
 
+#define csv_file "/home/ktv/C Projects/Reciept_Generator/Data/items.csv"
+#define reciept_count "/home/ktv/C Projects/Reciept_Generator/Data/rC.txt"
+
 size_t l = 0;
 typedef struct {
     int id;
@@ -69,7 +72,7 @@ int main() {
     int n = 0;
 
     // init fp
-    FILE *fp = fopen("/home/ktv/CodeShit/D/genRec/items.csv", "r");
+    FILE *fp = fopen(csv_file, "r");
     if (fp == NULL) {
         printf("Error opening file nigga\n");
         return 1;
@@ -102,7 +105,7 @@ int main() {
     dispStore(i, l);
     purchase(i, l);
 
-    FILE *fp2 = fopen("/home/ktv/CodeShit/D/genRec/rC.txt", "r+");
+    FILE *fp2 = fopen(reciept_count, "r+");
         if (fp2 == NULL) {
         printf("Error opening file nigga\n");
         return 1;
@@ -114,7 +117,7 @@ int main() {
         g = atoi(line);
     }
     char filename[50];
-    sprintf(filename, "/home/ktv/CodeShit/D/genRec/Rs/reciept_%d.txt", g++);
+    sprintf(filename, "reciept_%d.txt", g++);
     rewind(fp2);
     fprintf(fp2, "%d", g);
 
