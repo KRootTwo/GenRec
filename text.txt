@@ -1,0 +1,32 @@
+                RECIEPT               
++-------------------------+--------+------+
+| sl | item name          |  price |  pc  |
+| 1  | Octane Gel         |  10.00 |   1  |
+| 2  | Linc Executive Gel |  20.00 |   4  |
+| 3  | Hauser Sonic Gel   |  15.00 |   7  |
+| 4  | Linc Glass Gel     |  10.00 |   1  |
+| 5  | Linc Ocean Gel     |  10.00 |   0  |
++-------------------------+--------+------+
+| Total:                  |        |      |
++-------------------------+--------+------+
+
+
+
+
+
+/*
+    printf("| %zu  | %-18s | %6.2f |\n", i+1, j[i].name, j[i].price);
+    }
+    printf("+-------------------------+--------+\n");
+        fprintf(fp3, "%24s", "RECIEPT\n");
+    fprintf(fp3, "+-------------------------+---------+-------+\n");
+    for (size_t j = 0; j < l; j++) {
+        if (i[j].amt != 0) {
+           fprintf(fp3, "| %zu  | %-18s |  %6.2f |  %-2d  |\n", j+1, i[j].name, i[j].price, i[j].amt); 
+        }
+    }
+    fprintf(fp3, "+-------------------------+---------+-------+\n");
+    fprintf(fp3, "| %-23s |  %-4.2f |  %-3d  |\n", "Total", totalAmt(i, l), totalPc(i, l));
+    
+    fprintf(fp3, "+-------------------------+---------+-------+\n");
+*/
